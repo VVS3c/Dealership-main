@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head") -%>
+  <body>
+    <%- include("../partials/navbar"); %>
+    <div class="container py-5">
+      <h1 class="text-center">Your Saved Cars</h1>
+      <p class="text-center mb-4">Review and manage your saved cars below.</p>
+      <div class="row">
+        <!-- Example Card -->
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img
+              src="https://images.unsplash.com/photo-1600268330186-76564be81357?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top"
+              alt="Car Image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">BMW 220i</h5>
+              <p class="card-text">Reliable coupe with great mileage.</p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        <!-- Add more cards dynamically -->
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> 
+  <div class="container">
+    <!-- Brand Logo -->
+    <a class="navbar-brand" href="/">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="me-2"
+      >
+        <path
+          d="M20 17h-1l-2-5H7l-2 5H4a2 2 0 0 0-2 2v1h20v-1a2 2 0 0 0-2-2z"
+        ></path>
+        <path
+          d="M7.5 10 8.5 5h7l1 5"
+        ></path>
+        <circle cx="7.5" cy="17.5" r="1.5"></circle>
+        <circle cx="16.5" cy="17.5" r="1.5"></circle>
+      </svg>
+      Auto Prestige
+    </a>
+
+    <!-- Navbar Toggle for Mobile -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="navbar-nav">
+        <% if (user) { %>
+        <!-- User Logged In -->
+        <span class="navbar-text me-2">Welcome, <%= user.username %></span>
+        <a class="btn btn-outline-primary me-2" href="/inventory">Inventory</a>
+<a class="btn btn-outline-primary me-2" href="/financing">Financing</a>
+<a class="btn btn-outline-primary me-2" href="/saved-cars">Saved Cars</a>
+<a class="btn btn-primary me-2" href="/logout">Logout</a>
+        <% } else { %>
+        <!-- Guest Links -->
+        <a class="btn btn-outline-primary me-2" href="/login">Login</a>
+        <a class="btn btn-primary me-2" href="/signup">Sign Up</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav> 

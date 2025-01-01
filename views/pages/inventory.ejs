@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') -%>
+  <body>
+    <%- include('../partials/navbar'); %>
+
+    <div class="vh-100 d-flex align-items-center position-relative">
+      <div class="position-absolute w-100 h-100" style="z-index: -1">
+        <img
+          src="https://images.unsplash.com/photo-1522037576655-7a93ce0f4d10?q=80&w=2070&auto=format&fit=crop"
+          class="w-100 h-100 object-fit-cover"
+          alt="Inventory Background"
+        />
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
+        ></div>
+      </div>
+
+      <div class="container text-center text-white">
+        <h1 class="display-4 fw-bold mb-4">Explore Our Inventory</h1>
+        <p class="lead mb-4">Find the perfect car for your lifestyle and budget.</p>
+        <form class="row g-3 justify-content-center" method="POST" action="/search-cars">
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              name="make"
+              placeholder="Make (e.g., Toyota, BMW)"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              name="model"
+              placeholder="Model (e.g., Corolla, X5)"
+              required
+            />
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-primary w-100">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
