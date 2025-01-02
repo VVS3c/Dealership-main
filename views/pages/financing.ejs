@@ -11,7 +11,7 @@
     }
     .container {
       background: rgba(0, 0, 0, 0.7); 
-      padding: 20px;
+      padding: 1px;
       border-radius: 10px;
     }
     label,
@@ -54,7 +54,7 @@
         const tenure = document.getElementById('tenure').value;
 
         if (income && tenure) {
-          const maxLoanAmount = income * tenure * 0.5; // Simplified formula
+          const maxLoanAmount = income * tenure * 0.5; 
           const resultText = `Based on your income, you may be eligible for a loan of approximately $${maxLoanAmount.toLocaleString()}.`;
           const resultElement = document.getElementById('result');
           resultElement.textContent = resultText;

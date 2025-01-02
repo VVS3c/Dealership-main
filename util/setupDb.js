@@ -15,7 +15,7 @@ const pool = mysql.createPool({
     const connection = await pool.getConnection();
     console.log("MySQL connection established for setup");
 
-    // Create Users Table
+  
     const usersTableSql = `
       CREATE TABLE IF NOT EXISTS users (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -24,7 +24,7 @@ const pool = mysql.createPool({
       );
     `;
 
-    // Create Cars Table
+  
     const carsTableSql = `
       CREATE TABLE IF NOT EXISTS cars (
         id INT AUTO_INCREMENT PRIMARY KEY,

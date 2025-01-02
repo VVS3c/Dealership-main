@@ -1,11 +1,8 @@
 const db = require("../db");
 const bcrypt = require("bcrypt");
 
-async function registerAccount(username, password, confirmPassword) {
-  if (password !== confirmPassword) {
-    throw new Error("Passwords do not match");
-  }
-
+async function registerAccount(username, password) {
+ 
   const [rows] = await db.query("SELECT * FROM users WHERE username = ?", [
     username,
   ]);
@@ -15,6 +12,7 @@ async function registerAccount(username, password, confirmPassword) {
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
+
   await db.query("INSERT INTO users (username, password) VALUES (?, ?)", [
     username,
     hashedPassword,
@@ -22,3 +20,4 @@ async function registerAccount(username, password, confirmPassword) {
 }
 
 module.exports = registerAccount;
+

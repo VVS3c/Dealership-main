@@ -103,7 +103,7 @@ router.get("/financing", isAuthenticated, (req, res) => {
 router.post("/financing/apply", isAuthenticated, (req, res) => {
   const { name, email, income } = req.body;
 
-  // Process financing application (e.g., save to database)
+  
   req.flash("success", "Financing application submitted successfully!");
   res.redirect("/financing");
 });
